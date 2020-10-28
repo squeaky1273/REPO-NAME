@@ -14,7 +14,10 @@ const methodOverride = require('method-override')
 const app = express();
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/petes-pets');
+mongoose.connect('mongodb://localhost/petes-pets', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,6 +43,7 @@ app.use((req, res, next) => {
   err.status = 404;
   next(err);
 });
+
 
 // error handler
 app.use((err, req, res, next) => {
