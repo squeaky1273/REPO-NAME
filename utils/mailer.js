@@ -13,7 +13,7 @@ const nodemailerMailgun = nodemailer.createTransport(mg(auth));
 module.exports.sendMail = (user, req, res) => {
     nodemailerMailgun.sendMail({
         from: 'padyn.riddell@students.makeschool.com',
-        to: 'dkudrat@gmail.com',
+        to: 'pjriddell22@gmail.com',
         subject: 'Pet Purchased',
         template: {
             name: 'email.handlebars',
