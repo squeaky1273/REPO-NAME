@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/node,macos,bower
 
 ### macOS ###
@@ -92,4 +91,4 @@ typings/
 todo.txt
 old-code.txt
 
-uploads
+uploads/*

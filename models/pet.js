@@ -6,8 +6,9 @@ const mongoose = require('mongoose'),
 const mongoosePaginate = require('mongoose-paginate');
 
 mongoosePaginate.paginate.options = {
-  limit: 3
+  limit: 3 // how many records on each page
 };
+
 
 const PetSchema = new Schema({
   name: { type: String, required: true }
@@ -18,11 +19,12 @@ const PetSchema = new Schema({
   , avatarUrl: { type: String, required: true }
   , favoriteFood: { type: String, required: true }
   , description: { type: String, minlength: 140, required: true }
-}, {
+  // , price: {type: Number, required: true }
+},
+{
   timestamps: true
 });
 
 PetSchema.plugin(mongoosePaginate);
 
 module.exports = mongoose.model('Pet', PetSchema);
-

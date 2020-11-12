@@ -8,7 +8,7 @@ if (document.querySelector('#new-pet')) {
         // Assign the multipart/form-data headers to axios does a proper post
         axios.post('/pets', pet, {
             headers: {
-                'Content-Type': 'multipart/form-data;'
+                'Content-Type': 'multipart/form-data'
             }
         })
             .then(function (response) {
